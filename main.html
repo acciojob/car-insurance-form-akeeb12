@@ -1,47 +1,70 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up Form</title>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-	 <form action="/submit-signup" method="POST">
+    <!-- the entire body must be written by student -->
+    <form action="/submit-signup" method="POST">
+        <!-- Name Field -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
+        <!-- Email Field -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="gender">Gender:</label>
-		 <input type="radio">
+        <!-- Gender Selection -->
+        <fieldset>
+            <legend>Gender:</legend>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="non-binary" name="gender" value="non-binary">
+                <label for="non-binary">Non-Binary</label>
+            </div>
+            <div>
+                <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say">
+                <label for="prefer-not-to-say">Prefer Not to Say</label>
+            </div>
+        </fieldset>
 
+        <!-- Car Brands Selection -->
         <label for="cars">Car Brands:</label>
         <select id="cars" name="cars" required>
             <option value="" disabled selected>--Please choose an option--</option>
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
-            <option value="Mercedez">Mercedez</option>
-			
-			<label for="Car Age">Car Age:</label>
-			<input type="number" name="carage" id="carage" required>
+            <option value="Mercedes">Mercedes</option>
             <!-- Add more car brands as needed -->
         </select>
 
-        <label for="dop">Date of Purchase:</label>
-        <input type="date" id="dop" name="dob" required>
+        <!-- Car Age Field -->
+        <label for="carage">Car Age:</label>
+        <input type="number" name="carage" id="carage" required>
 
+        <!-- Date of Purchase Field -->
+        <label for="dop">Date of Purchase:</label>
+        <input type="date" id="dop" name="dop" required>
+
+        <!-- Password Field -->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Password" required>
-		
 
+        <!-- Submit Button -->
         <button type="submit">Submit</button>
     </form>
-    <script type="text/javascript" src="./script.js">
-</script>
 
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
